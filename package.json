@@ -1,0 +1,25 @@
+{
+  "name": "cypresstests",
+  "version": "1.0.0",
+  "description": "Cypress API and UI automation project",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:api": "cypress run --spec \"cypress/e2e/api/**/*.cy.js\"",
+    "test:ui": "cypress run --spec \"cypress/e2e/ui/**/*.cy.js\"",
+    "test:all": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "e2e",
+    "api-testing",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "cypress": "^15.11.0"
+  }
+}

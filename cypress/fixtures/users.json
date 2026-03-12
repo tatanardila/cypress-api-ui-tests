@@ -1,0 +1,12 @@
+{
+  "loginUser": {
+    "username": "juanperez123",
+    "password": "Admin123!"
+  },
+  "registerUser": {
+    "firstName": "Juan",
+    "lastName": "Perez",
+    "userName": "juanperez123",
+    "password": "Admin123!"
+  }
+}
