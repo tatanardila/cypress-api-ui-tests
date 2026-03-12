@@ -2,13 +2,13 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
-    
     baseUrl: 'https://demoqa.com',
     setupNodeEvents(on, config) {
     },
   },
 
   env: {
-    apiBaseUrl: 'https://reqres.in'
+    apiBaseUrl: 'https://reqres.in',
+    REQRES_API_KEY: process.env.REQRES_API_KEY
   }
 });

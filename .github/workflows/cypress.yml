@@ -21,10 +21,12 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run API tests
         run: npm run test:api
+        env:
+          REQRES_API_KEY: ${{ secrets.REQRES_API_KEY }}
 
       - name: Run UI tests
         run: npm run test:ui
