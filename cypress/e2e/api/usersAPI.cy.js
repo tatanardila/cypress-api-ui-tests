@@ -1,9 +1,11 @@
 import { apiRequest } from '../../utils/apiHelper';
-import { getHeaders } from '../../utils/helpers';
 
 describe('API Users Test', () => {
 
   it('should get list succesfully', () => {
+    cy.log(`API URL: ${Cypress.env('apiBaseUrl')}`);
+  cy.log(`API KEY exists: ${!!Cypress.env('REQRES_API_KEY')}`);
+    
     apiRequest('GET', '/api/users?page=2').then((response) => {
       expect(response.status).to.eq(200);
       expect(response.body.data).to.have.length(6);
@@ -11,7 +13,7 @@ describe('API Users Test', () => {
     });
   });
 
-  it('POST create user', () => {
+  it('should create user successfully', () => {
     apiRequest('POST', '/api/users',{ 
         name: 'Juan',
         job: 'QA Engineer'}
@@ -35,11 +37,10 @@ describe('API Users Test', () => {
     })
   })
 
-  it('should return 404 for a non-existing user', ()=>{
-    apiRequest('GET', '/api/users/2').then((response)=>{
-      expect(response.status).to.eq(404);
-      expect(response.body).to.deep.equal({})
-    })
-  })
-
-}); 
+  it('should return 404 for a non-existing user', () => {
+  apiRequest('GET', '/api/users/23', null, false).then((response) => {
+    expect(response.status).to.eq(404);
+    expect(response.body).to.deep.equal({});
+  });
+  });
+});
