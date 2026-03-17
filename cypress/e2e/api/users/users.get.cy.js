@@ -1,5 +1,4 @@
-import { getUsersList, getSingleUser, getNonExistingUser, } from "../services/userService";
-
+import { getUsersList, getSingleUser, getNonExistingUser } from '../../../services/userService.js';
 describe('Users API - GET', ()=> {
     it('should get users list Succesfully', ()=> {
         getUsersList(2).then((response)=>{
