@@ -1,9 +1,8 @@
-import { registerUser, registerUserUnsuccessfully } from "../services/authService";
+import {registerUser, registerUserUnsuccessfully} from '../../../services/authService.js';
 
-describe('Aut - API - register', ()=>{
-    let authData;
-
-    before(()=>{
+describe('Register users / API POST', ()=>{
+    let authData;   
+before(()=>{
         cy.fixture('authData').then((data)=>{
             authData=data;
         });
@@ -24,8 +23,8 @@ describe('Aut - API - register', ()=>{
             expect(response.status).to.eq(400);
             expect(response.body).to.have.property('error');
             expect(response.body.error).to.eq('Missing password')
-        })
-    })
+        });
+    });
 
 
-})
+});

@@ -1,5 +1,4 @@
-import { loginUser, loginUserUnSuccesfully } from "../services/authService";
-
+import { loginUser, loginUserUnSuccesfully } from "../../../services/authService";
 describe('Auth API - Login', ()=>{
 
     let authData;
@@ -26,6 +25,5 @@ describe('Auth API - Login', ()=>{
             expect(response.body.error).to.eq('Empty request body');
         });
     });
-
 
 });

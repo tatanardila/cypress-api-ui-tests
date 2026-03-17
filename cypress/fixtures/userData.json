@@ -1,0 +1,14 @@
+{
+     "createUser": {
+    "name": "Juan",
+    "job": "QA Engineer"
+    },
+    "putUser": {
+      "name": "Juan Updated",
+      "job": "Senior QA Engineer"
+    },
+    "patchUser": {
+      "job": "QA Tech Lead"
+    }
+
+}
