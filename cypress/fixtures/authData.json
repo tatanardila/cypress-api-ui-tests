@@ -1,0 +1,17 @@
+{
+    "validLogin":{
+        "email": "eve.holt@reqres.in",
+        "password": "cityslicka"
+    },
+    "invalidLogin" :{
+        "email": "peter@klaven"
+    },
+    "validRegister":{
+        "email": "eve.holt@reqres.in",
+         "password": "pistol"
+    },
+    "invalidRegister": {
+    "email": "sydney@fife"
+    }
+
+}
